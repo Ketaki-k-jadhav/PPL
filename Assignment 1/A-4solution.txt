@@ -1,0 +1,13 @@
+Question 1.  How is array declaration and initialization handled?
+
+    Answer: Array declaration takes place in a new line with the array length.
+           The each elememts of an array are declared on a single line . 
+
+        2   Why does the statement a[i] = b[i] get broken down to two steps with
+            an intermediate temporary?
+    
+    Answer: As in GIMPLE one single operation is performed at a time, so
+        a[i] and b[i] are first assigned to a temporary variable each and these
+        temporary variables are used for furthur operations.
+
+Question 3. Why are there CLOBBER statements at the end?

@@ -1,0 +1,20 @@
+        1   How many  times is the expression  (a + c) computed  in the original
+            code (as seen in the SSA pass)? What about after the FRE pass?
+
+    Answer:In the original code the expression(a+c)is calculated twice while
+            after FRE pass, it is calculated only once.
+
+
+
+        2   Have  there been  any more  optimizations  after FRE?  How will  you
+            check?
+
+    Answer: For checking the furthur optimization, we can inspect the final file
+            B-4.c.*optimized . It shows that the redundant assignments have been 
+            reduced, 
+
+        3   Why did  we have  to put a  "return b" in  this assignment?  What if
+            "return b" is changed to "return 0"? Will it make any difference?
+
+    Answer: In the given code we are calculating the value of b itself.
+            So instead of returning b, if we return 0, then the code will output nothing.
