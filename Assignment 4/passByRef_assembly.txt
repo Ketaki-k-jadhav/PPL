@@ -1,0 +1,35 @@
+Reading symbols from C:\Users\Ketaki\OneDrive\Desktop\SY Academics\PPL\passByRef.exe...done.
+
+ASSEMBLY CODE FOR main function :
+
+(gdb) disassemble main
+Dump of assembler code for function main:
+   0x00401423 <+0>:     push   %ebp
+   0x00401424 <+1>:     mov    %esp,%ebp
+   0x00401426 <+3>:     and    $0xfffffff0,%esp
+   0x00401429 <+6>:     sub    $0x20,%esp
+   0x0040142c <+9>:     call   0x401a10 <__main>
+   0x00401431 <+14>:    movl   $0x5,0x1c(%esp)
+   0x00401439 <+22>:    lea    0x1c(%esp),%eax
+   0x0040143d <+26>:    mov    %eax,(%esp)
+   0x00401440 <+29>:    call   0x401410 <_Z3funRi>
+   0x00401445 <+34>:    mov    $0x0,%eax
+   0x0040144a <+39>:    leave
+   0x0040144b <+40>:    ret    
+End of assembler dump.
+
+ASSEMBLY CODE FOR fun function :
+
+(gdb) disassemble fun
+Dump of assembler code for function _Z3funRi:
+   0x00401410 <+0>:     push   %ebp
+   0x00401411 <+1>:     mov    %esp,%ebp
+   0x00401413 <+3>:     mov    0x8(%ebp),%eax
+   0x00401416 <+6>:     mov    (%eax),%eax
+   0x00401418 <+8>:     lea    0x1(%eax),%edx
+   0x0040141b <+11>:    mov    0x8(%ebp),%eax
+   0x0040141e <+14>:    mov    %edx,(%eax)
+   0x00401420 <+16>:    nop
+   0x00401421 <+17>:    pop    %ebp
+   0x00401422 <+18>:    ret
+End of assembler dump.
